@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>React-html-components by mykhailokoretskyi</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>React-html-components</h1>
+        <p>Generic html react components for materializecss</p>
+
+        <p class="view"><a href="https://github.com/mykhailokoretskyi/react-html-components">View the Project on GitHub <small>mykhailokoretskyi/react-html-components</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/mykhailokoretskyi/react-html-components/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/mykhailokoretskyi/react-html-components/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/mykhailokoretskyi/react-html-components">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="react-html-components" class="anchor" href="#react-html-components" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>react-html-components</h1>
+
+<h2>
+<a id="generic-html-react-components-for-materializecss" class="anchor" href="#generic-html-react-components-for-materializecss" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Generic html react components for materializecss</h2>
+
+<p><br>
+<a href="https://travis-ci.org/react-html-components/react-html-components"><img src="https://travis-ci.org/mykhailokoretskyi/react-html-components.svg?branch=master" alt="Build
+Status"></a> <a href="https://npmjs.org/package/react-html-components" title="View this project on npm"><img src="http://img.shields.io/npm/v/react-html-components.svg?style=flat" alt="npm
+version"></a></p>
+
+<h3>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting started</h3>
+
+<h4>
+<a id="install-npm-package" class="anchor" href="#install-npm-package" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install npm package</h4>
+
+<p><code>npm install --save react-html-components</code></p>
+
+<h4>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h4>
+
+<p><code>import {TextInput, Switch} from 'react-html-components';</code></p>
+
+<h3>
+<a id="supported-materialize-elements" class="anchor" href="#supported-materialize-elements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Supported materialize elements</h3>
+
+<ol>
+<li>Form elements
+
+<ol>
+<li>input type text (<strong>TextInput</strong>)</li>
+<li>input type email (<strong>EmailInput</strong>)</li>
+<li>input type password (<strong>PasswordInput</strong>)</li>
+<li>input type radio (<strong>RadioButton</strong>)</li>
+<li>input type checkbox (<strong>Checkbox</strong>)</li>
+<li>switch (<strong>Switch</strong>)</li>
+</ol>
+</li>
+</ol>
+
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h2>
+
+<h3>
+<a id="form-elements" class="anchor" href="#form-elements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Form elements</h3>
+
+<h4>
+<a id="common-attributes" class="anchor" href="#common-attributes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Common attributes</h4>
+
+<ul>
+<li>
+<code>name</code>               - type <code>string</code>;</li>
+<li>
+<code>value</code>              - type <code>string</code>;</li>
+<li>
+<code>id</code>                 - type <code>string</code>;</li>
+<li>
+<code>disabled</code>           - type <code>boolean</code>;</li>
+<li>
+<code>required</code>           - type <code>boolean</code>;</li>
+<li>
+<code>validate</code>           - type <code>boolean</code> (enables materialize`s validation);</li>
+<li>
+<code>errorMessage</code>       - type <code>string</code> (<code>data-error</code> attribute of <code>&lt;input/&gt;</code>);</li>
+<li>
+<code>successMessage</code>     - type <code>string</code> (<code>data-success</code> attribute of <code>&lt;input/&gt;</code>);</li>
+<li>
+<code>changeCallback</code>     - type <code>function</code> (executed when input changes value/checked);</li>
+<li>
+<code>mouseEnterCallback</code> - type <code>function</code> (executed on hover of <code>&lt;input/&gt;</code>);</li>
+<li>
+<code>mouseLeaveCallback</code> - type <code>function</code> (executed on mouse leave the <code>&lt;input/&gt;</code>)</li>
+</ul>
+
+<h4>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Methods</h4>
+
+<p>Following accessor methods are available through the React`s <code>refs</code>:</p>
+
+<ul>
+<li>
+<code>value</code>              - getter/setter (available for all inputs);</li>
+<li>
+<code>checked</code>            - getter/setter (available <strong>ONLY</strong> for <em>RadioButton</em>, <em>Checkbox</em>, <em>Switch</em>; throws an exception if called for other inputs);</li>
+</ul>
+
+<p><em>Example</em>:</p>
+
+<pre><code>someMethod(){
+  this.refs.textInput.value("new value"); // setter
+  this.refs.textInput.value()             // getter
+}
+.......
+render(){
+  return (
+    &lt;TextInput ref="textInput" value={this.state.value} /&gt;
+);
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/mykhailokoretskyi">mykhailokoretskyi</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
